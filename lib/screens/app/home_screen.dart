@@ -46,7 +46,7 @@ class HomeScreen extends GetView<HomeController> {
             type: BottomNavigationBarType.shifting,
             currentIndex: controller.pageIndex.value,
             onTap: (value) => controller.pageIndex.value = value,
-            selectedItemColor: Colors.white,
+            selectedItemColor: Colors.black,
             unselectedItemColor: Colors.grey,
             // fixedColor: Colors.grey,
             items: const [
@@ -78,7 +78,8 @@ class HomeScreen extends GetView<HomeController> {
             controller.pageIndex.value = 0;
             return false;
           } else {
-            return onWillPop(context);
+            // return onWillPop(context);
+            return true;
           }
         },
       ),
